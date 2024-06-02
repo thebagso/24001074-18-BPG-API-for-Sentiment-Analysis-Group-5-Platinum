@@ -1,0 +1,27 @@
+tags:
+  - name: Pemrosesan Text
+get:
+  description: Teks yang akan diproses
+
+parameters:
+  - name: text
+    in: formData
+    required: true
+    type: string
+
+  - name: model
+    in: formData
+    required: true
+    type: string
+    enum:
+    - lstm
+    - nn
+
+responses:
+    '200':
+      description: Successful response
+    '400':
+      description: Bad Request
+    '500':
+      description: Internal Server Error
+
